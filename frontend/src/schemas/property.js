@@ -1,0 +1,2 @@
+import {z} from 'zod';
+export const propertySchema=z.object({title:z.string().min(5,'Escribí al menos 5 caracteres'),location:z.string().min(3,'Indicá una ubicación'),type:z.string(),operation:z.string(),price:z.coerce.number().min(0),currency:z.string(),expenses:z.coerce.number().min(0),beds:z.coerce.number().min(0),area:z.coerce.number().min(0),status:z.string(),description:z.string().min(10,'Agregá una descripción de al menos 10 caracteres'),units:z.string()});
